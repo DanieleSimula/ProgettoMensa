@@ -1,0 +1,32 @@
+.bottom_form{
+    background-color: aliceblue;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 1%;
+}
+
+.section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+form{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+ul{
+    list-style: none;
+}
+
+#metodoPagamento{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1{
+    padding-top: 5%;
+}

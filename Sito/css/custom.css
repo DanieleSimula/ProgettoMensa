@@ -1,0 +1,16 @@
+.navbar.bg-dark,
+.navbar-dark.bg-dark,
+nav.bg-dark {
+  background-color: #1a1a2e !important;
+}
+
+/* Footer */
+footer.bg-dark,
+.footer.bg-dark,
+div.bg-dark {
+  background-color: #1a1a2e !important;
+}
+
+a.btn-dark{
+  background-color: #1a1a2e;
+}

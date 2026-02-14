@@ -1,0 +1,98 @@
+<!-- FORM REGISTRAZIONE - Dati aggiuntivi studente -->
+
+<hr class="my-4">
+
+<!-- Email -->
+<div class="row g-3 mb-3">
+    <div class="col-12">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" id="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+            tabindex="4" required>
+        <div class="invalid-feedback">l'email deve essere del formato [testo@dominio.it/com/ecc]</div>
+    </div>
+</div>
+
+<!-- Nome, Cognome, Codice Fiscale -->
+<div class="row g-3 mb-3">
+    <div class="col-12 col-md-4">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" name="nome" id="nome" pattern="^[A-Za-zÀ-ÿ\s']{3,30}$" minlength="3"
+            maxlength="30" tabindex="5" required>
+        <div class="invalid-feedback">Il nome può contenere solo lettere e deve essere composto da minimo 3 caratteri
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <label for="cognome" class="form-label">Cognome</label>
+        <input type="text" class="form-control" name="cognome" id="cognome" pattern="^[A-Za-zÀ-ÿ\s']{3,30}$"
+            minlength="3" maxlength="30" tabindex="6" required>
+        <div class="invalid-feedback">Il cognome può contenere solo lettere e deve essere composto da minimo 3 caratteri
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <label for="cf" class="form-label">Codice Fiscale</label>
+        <input type="text" class="form-control" name="cf" id="cf" pattern="^[A-Za-z0-9]{16}$" minlength="16"
+            maxlength="16" tabindex="7" style="text-transform: uppercase;" required>
+        <div class="invalid-feedback">Il codice fiscale può contenere solo lettere e numeri e deve essere composto da
+            esattamente 16 caratteri</div>
+    </div>
+</div>
+
+<!-- Sesso e Data di Nascita -->
+<div class="row g-3 mb-3">
+    <div class="col-12 col-md-6">
+        <label for="sesso" class="form-label">Sesso</label>
+        <select class="form-select" name="sesso" id="sesso" tabindex="8" required>
+            <option value="" selected>Scegli un'opzione</option>
+            <option value="M">Maschio</option>
+            <option value="F">Donna</option>
+            <option value="A">Preferisco non specificare</option>
+        </select>
+    </div>
+    <div class="col-12 col-md-6">
+        <label for="dataNascita" class="form-label">Data di Nascita</label>
+        <input type="date" class="form-control" name="dataNascita" tabindex="9" id="dataNascita" required>
+        <div class="invalid-feedback">La data di nascità non può essere nel futuro o più vecchia di 100 anni</div>
+    </div>
+
+</div>
+
+<hr class="my-4">
+
+<!-- Indirizzo e Città -->
+<div class="row g-3 mb-3">
+    <div class="col-12 col-md-8">
+        <label for="indirizzo" class="form-label">Indirizzo di Residenza</label>
+        <input type="text" class="form-control" name="indirizzo" id="indirizzo" minlength="5"
+        tabindex="10" required>
+        <div class="invalid-feedback">Inserisci un indirizzo valido</div>
+    </div>
+    <div class="col-12 col-md-4">
+        <label for="citta" class="form-label">Città</label>
+        <input type="text" class="form-control" name="citta" id="citta" pattern="[A-Za-zàèéìòù ]{2,30}"
+        tabindex="11" required>
+        <div class="invalid-feedback">Inserisci una città valida</div>
+    </div>
+</div>
+
+<hr class="my-4">
+
+<!-- ISEE -->
+<div class="row g-3 mb-3">
+    <div class="col-12 text-center">
+        <label for="isee" class="form-label">ISEE (€)</label>
+        <input type="number" class="form-control" name="isee" id="isee" tabindex="12" required>
+        <small class="form-text text-muted">
+        </small>
+    </div>
+</div>
+
+<hr class="my-4">
+
+<script>
+    // Validazione Data di Nascita
+    document.getElementById('dataNascita').max = new Date().toISOString().split('T')[0];
+    let minDate = new Date();
+    minDate.setFullYear(minDate.getFullYear() - 100);
+    document.getElementById('dataNascita').min = minDate.toISOString().split('T')[0];
+
+</script>
