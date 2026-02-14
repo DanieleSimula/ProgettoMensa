@@ -9,7 +9,7 @@ progettato e costruito da:
 per l'importazione del sito si consiglia di avere un installazione pulita di xampp.
 
 1. entrare nella pagina localhost/phpmyadmin
-2. importare i dumb database/DataBasemensa.sql e Database/utenti.sql
+2. importare i dump database/DataBasemensa.sql e Database/utenti.sql
 3. inserire la cartella "sito" dentro c:\xampp\htdocs\..
 4. recarsi all'url sito/index.php
 
@@ -20,6 +20,6 @@ dirigersi in c:\xampp\mysql
 2. fare una copia della cartella backup e rinominarla in "data"
 3. avviare il server apache e MySQL da xampp 
 4. entrare nella pagina localhost/phpmyadmin
-5. importare i dumb database/DataBasemensa.sql e Database/utenti.sql
+5. importare i dump database/DataBasemensa.sql e Database/utenti.sql
 6. inserire la cartella "sito" dentro c:\xampp\htdocs\..
 7. recarsi all'url sito/index.php
